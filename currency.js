@@ -13,5 +13,10 @@
  * @link       http://devded.com, https://github.com/silkyland
  * @since      1.0.0
  */
+const reader = require('./numberReader')
 
-class Currency {}
+const currency = function (number, unit = "บาท") {
+    return reader(number) + unit
+}
+
+module.exports = currency

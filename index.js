@@ -13,3 +13,9 @@
  * @link       http://devded.com, https://github.com/silkyland
  * @since      1.0.0
  */
+
+const reader = require('./numberReader')
+const currency = require('./currency')
+
+console.log(reader(-50))
+console.log(currency(-50, "USD"))
