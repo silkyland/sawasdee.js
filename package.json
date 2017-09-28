@@ -1,0 +1,25 @@
+{
+  "name": "sawasdee",
+  "version": "1.0.0",
+  "description": "A very simple to use JavaScript library for translation  number, date, time, currency and slug to Thai reading style",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Thai",
+    "number",
+    "reader",
+    "translate",
+    "datetime",
+    "translate",
+    "Thai",
+    "reader",
+    "Thai",
+    "Slug",
+    "SEO",
+    "Friendly"
+  ],
+  "author": "Bundit Nuntates",
+  "license": "MIT"
+}
