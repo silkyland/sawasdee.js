@@ -21,5 +21,8 @@
     "Friendly"
   ],
   "author": "Bundit Nuntates",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "coinify": "^1.0.4"
+  }
 }

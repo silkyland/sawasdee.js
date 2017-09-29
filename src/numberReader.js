@@ -15,13 +15,6 @@
  */
 
 
-const MINUS = "ลบ"
-const ZERO = "ศูนย์"
-const SECOND_POSITION = "ยี่"
-const ONE_AFTER = "เอ็ด"
-const positionThai = ["", "สิบ", "ร้อย", "พัน", "หมื่น", "แสน", "ล้าน"]
-const thaiCounting = ["", "หนึ่ง", "สอง", "สาม", "สี่", "ห้า", "หก", "เจ็ด", "แปด", "เก้า"]
-
 /**
  * function numberReader
  * 
@@ -30,43 +23,38 @@ const thaiCounting = ["", "หนึ่ง", "สอง", "สาม", "สี�
  */
 
 const numberReader = function (number) {
+    let ZERO = "ศูนย์"
+    let SECOND_POSITION = "ยี่"
+    let ONE_AFTER = "เอ็ด"
+    let positionThai = ["", "สิบ", "ร้อย", "พัน", "หมื่น", "แสน", "ล้าน"]
+    let thaiCounting = ["", "หนึ่ง", "สอง", "สาม", "สี่", "ห้า", "หก", "เจ็ด", "แปด", "เก้า"]
     // define this for result text
     let readingText = ""
     // is number is minus
     let isMinus = ''
     // define blank array 
     let arr = []
-
     // is zero
-    if (number === 0) {
+
+    if (number == 0) {
         return ZERO
     }
     // non zero
     else {
-        // check number is minus eg. -1, -5, or -n
-        if (number < 0) {
-            number *= -1
-            isMinus = MINUS
-        }
         // split number to array and reverse
         let numberArray = number.toString().split('').reverse()
-
-
         /*
         / grouping array to multiple array by 6
         */
         while (numberArray.length > 0) {
             arr.push(numberArray.splice(0, 6))
         }
-
         // reverse array group
         arr.reverse()
-
         // revers child array
         arr.map(function (value, index) {
             arr[index].reverse()
         })
-
         // map outermost array 
         arr.map(function (array, i) {
             let countNumber = array.length
@@ -89,7 +77,7 @@ const numberReader = function (number) {
             })
             readingText += i + 1 != arr.length ? positionThai[6] : ''
         })
-        return (isMinus + readingText)
+        return readingText
     }
 }
 
